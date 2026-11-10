@@ -1,0 +1,95 @@
+/* CartShare Stylesheet */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+}
+
+/* Navbar */
+.navbar-brand span {
+    color: #0d6efd;
+}
+
+/* Card subtle styling */
+.card {
+    border-radius: 8px;
+}
+
+/* Activity log container */
+.activity-log-container {
+    max-height: 280px;
+    overflow-y: auto;
+    font-size: 0.88rem;
+}
+
+.activity-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: #888888;
+}
+
+/* Cart table styling */
+.table th {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.table td {
+    font-size: 0.92rem;
+}
+
+/* Buttons transition */
+.btn {
+    transition: all 0.2s ease;
+}
+
+/* =====================================
+   Print Media Styles (Audit-Ready Receipt)
+   ===================================== */
+@media print {
+    /* Hide everything on screen except printable receipt */
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
+    }
+
+    .no-print,
+    header,
+    nav,
+    footer,
+    .btn,
+    #authSection,
+    #dashboardSection {
+        display: none !important;
+    }
+
+    #printableReceipt {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .receipt-box {
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    .table-bordered th,
+    .table-bordered td {
+        border: 1px solid #000000 !important;
+    }
+}
+
